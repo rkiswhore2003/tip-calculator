@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style>
+        .tc{
+            border-radius: 10px;
+            background-color: lightgrey;
+            padding: 20px;
+            width: 550px;
+            margin: 10% auto;
+        }
+        .itc{
+            background-color: aliceblue;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        button{
+            background-color: green;
+            width: 100%;
+            border: none;
+            padding: 7px;
+            color: aliceblue;
+            transition: all 500ms;
+        }
+        button:hover{
+            background-color: lightgreen;
+            color: black;
+        }
+        input[type="number"]{
+            width: 98.5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="tc">
+        <div class="itc">
+            <h1>Tip Calculator</h1>
+            <p>Enter Bill Amount and tip Percentage :</p>
+            <label for="">Bill amount :</label><br>
+            <input type="number" name="" id="billamnt"><br><br>
+            <label for="">Percentage :</label><br>
+            <input type="number" name="" id="percent"><br><br>
+            <button onclick="calc()">CALCULATE</button>
+            <P>Total : <span id="res"></span></P>
+        </div>
+    </div>
+    <script>
+        
+        function calc(){
+            var bill=document.getElementById("billamnt").value;
+            var per=document.getElementById("percent").value;
+            var r=bill*(per/100);
+            document.getElementById("res").textContent=r;
+        }
+    </script>
+</body>
+</html>
